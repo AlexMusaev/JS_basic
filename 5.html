@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо скопировать и вставить в данный скрипт все функции из 4 задания.
+Необходимо реализовать функцию:
+mathOperation(arg1, arg2, operation);
+Параметры:
+arg1 - первое число.
+arg2 - второе число.
+operation - строка, которая содержит один символ из: "+", "-", "*", "/".
+Функция mathOperation должна вернуть результат операции, который был передан в
+параметр operation для двух первых аргументов (arg1 и arg2).
+Функция mathOperation должна использовать для вычисления функции из 4 задания.
+
+Примеры вызова функции:
+console.log(mathOperation(5, 3, "+")); // 8
+console.log(mathOperation(5, 3, ":)")); // NaN
+
+Функции mathOperation всегда передаются корректные числа, проверки на NaN,
+Infinity делать не нужно, однако, в случае если был передан некорректный
+аргумент в параметр operation, необходимо вернуть NaN.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+<script>
+  "use strict";
+
+  /**
+ * Функция плюсует nub1 и num2 
+ * @param {number} первое число
+ * @param {number} второе число
+ * @returns {number} результат вычесления
+ */
+ function sum(num1, num2) {
+    return num1 + num2;
+  }
+
+  /**
+ * Функция вычетает nub1 и num2 
+ * @param {number} первое число
+ * @param {number} второе число
+ * @returns {number} результат вычесления
+ */
+ function subt(num1, num2) {
+    if (num1 > num2) {
+      return num1 - num2;
+    }
+  }
+
+  /**
+ * Функция умножает nub1 и num2 
+ * @param {number} первое число
+ * @param {number} второе число
+ * @returns {number} результат вычесления
+ */
+  function mult(num1, num2) {
+    return num1 * num2;
+  }
+
+ /**
+ * Функция делит nub1 и num2 
+ * @param {number} первое число
+ * @param {number} второе число
+ * @returns {number} результат вычесления
+ */
+  function divis(num1, num2) {
+    return num1 / num2;
+  }
+
+  const a = sum(4, 2);
+  console.log(a);
+
+  const b = subt(4, 2);
+  console.log(b);
+
+  const c = mult(4, 2);
+  console.log(c);
+
+  const d = divis(4, 2);
+  console.log(d);
+
+   /**
+    * Выполняет одно из предложеных математических действий.
+    * Аргументами функции.
+    * @param {number} arg1 первое число
+    * @param {number} arg2 второе число
+    * @param {number} operation - одна из заданных 4 операций (+, -, *, /).
+    * @return {number} результат вычесления
+  */
+  function mathOperation(arg1, arg2, operation) {
+    switch (operation) {
+      case "+": return sum(arg1, arg2);
+      case "-": return subt(arg1, arg2);
+      case "*": return mult(arg1, arg2);
+      case "/": return divis(arg1, arg2);
+      default: return NaN;
+    }
+  }
+
+  /*
+  С решение данной задачи мне подсказали, а именно с выбором дейсвий через
+  switch. Все остальное делал сам
+  */
+
+</script>
+</body>
+</html>
